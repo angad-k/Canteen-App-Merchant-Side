@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context=".homePageFrag"
+    android:background="#ffffff"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:textAlignment="center"
+            android:elevation="0dp"
+            android:outlineAmbientShadowColor="#000000"
+            android:background="@color/colorBackground"
+            android:layout_marginTop="0dp"
+            >
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/iconfinal"
+                android:id="@+id/iconhome"
+                android:gravity="center_vertical"
+                android:layout_alignParentStart="true"
+                android:layout_marginLeft="5dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="CHAAPO-NATOR"
+                android:textColor="#000000"
+                android:textSize="28sp"
+                android:textAlignment="center"
+                android:fontFamily="@assets/RobotoMedium"
+                android:gravity="center_vertical"
+                />
+        </RelativeLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Choose the canteen you want to control"
+            android:background="@color/colorBackground"
+            android:fontFamily="@assets/RobotoMedium"
+            android:textSize="20sp"
+            android:singleLine="false"
+            android:padding="5dp"
+            android:layout_marginTop="0dp"
+            android:textColor="#000000"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:text="Be advised that this is mostly a one-time choice"
+            android:background="@color/colorBackground"
+            android:textColor="#000000"
+            android:fontFamily="@assets/RobotoMedium"
+            android:textSize="20sp"
+            android:singleLine="false"
+            android:padding="5dp"
+            android:layout_marginTop="0dp"/>
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/mainGrid"
+
+                android:orientation="vertical"
+                android:layout_weight="8"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:padding="28dp"
+                android:clipToPadding="false"
+                android:background="@color/colorPrimaryDark"
+                android:elevation="5dp">
+                <com.google.android.material.card.MaterialCardView
+
+                    android:background="#ffffff"
+                    android:id="@+id/RJB"
+                    android:clickable="true"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+
+                    android:elevation="8dp"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        >
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:id="@+id/rajendrap"
+                            android:background="#ffffff" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="#000000"
+                            android:textColor="#ffffff"
+                            android:text="RJB Canteen"
+                            android:elevation="10dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:background="#ffffff"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:id="@+id/Ravindra"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:id="@+id/ravindrat"
+                            android:background="#ffffff" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="#000000"
+                            android:textColor="#ffffff"
+                            android:text="Ravindra Canteen"
+                            android:elevation="10dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:background="#ffffff"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+
+                    android:id="@+id/RKB"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:id="@+id/rkb"
+                            android:background="#ffffff" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="#000000"
+                            android:textColor="#ffffff"
+                            android:text="RKB Canteen"
+                            android:elevation="10dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:background="#ffffff"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+
+                    android:id="@+id/cautleycanteen"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:id="@+id/cautley"
+                            android:background="#ffffff" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="#000000"
+                            android:textColor="#ffffff"
+                            android:text="Cautley Canteen"
+                            android:elevation="10dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:background="#ffffff"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+
+                    android:id="@+id/sarojini"
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:id="@+id/sarojinin"
+                            android:background="#ffffff" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="#000000"
+                            android:textColor="#ffffff"
+                            android:text="Sarojini Canteen"
+                            android:elevation="10dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+                <com.google.android.material.card.MaterialCardView
+                    android:background="#ffffff"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+
+
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+
+                    >
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="130dp"
+                            android:id="@+id/rajivg"
+                            android:background="#ffffff" />
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="#000000"
+                            android:textColor="#ffffff"
+                            android:text="Rajiv Canteen"
+                            android:elevation="10dp"
+                            android:textAlignment="center"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+</FrameLayout>
