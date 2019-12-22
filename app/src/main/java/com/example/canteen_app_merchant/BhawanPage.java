@@ -20,16 +20,17 @@ import java.util.Map;
 public class BhawanPage extends Fragment {
 
 
-
+    static View view2;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         final View view = inflater.inflate(R.layout.fragment_bhawan_page, container, false);
+        view2 = view;
 
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         // Replace the contents of the container with the new fragment
-        ft.replace(R.id.BhawanPageFrame, new OrdersFrag());
+        ft.replace(R.id.BhawanPageFrame, new AddFrag());
         // or ft.add(R.id.your_placeholder, new FooFragment());
         // Complete the changes added above
         ft.commit();
@@ -70,7 +71,7 @@ public class BhawanPage extends Fragment {
 
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 // Replace the contents of the container with the new fragment
-                ft.replace(R.id.BhawanPageFrame, new OrdersFrag());
+                ft.replace(R.id.BhawanPageFrame, new AddFrag());
                 // or ft.add(R.id.your_placeholder, new FooFragment());
                 // Complete the changes added above
                 ft.commit();
@@ -94,7 +95,7 @@ public class BhawanPage extends Fragment {
 
                 FragmentTransaction ft = getFragmentManager().beginTransaction();
                 // Replace the contents of the container with the new fragment
-                ft.replace(R.id.BhawanPageFrame, new OrdersFrag());
+                ft.replace(R.id.BhawanPageFrame, new MenuFrag());
                 // or ft.add(R.id.your_placeholder, new FooFragment());
                 // Complete the changes added above
                 ft.commit();
@@ -114,6 +115,21 @@ public class BhawanPage extends Fragment {
 
 
         return view;
+    }
+    public static void edit_add()
+    {
+        final TextView Orders = view2.findViewById(R.id.orderTV);
+        final TextView Add = view2.findViewById(R.id.AddTV);
+        final TextView Edit = view2.findViewById(R.id.MenuTV);
+        Add.setBackgroundColor(Color.parseColor("#696969"));
+        Add.setClickable(false);
+        Add.setTextColor(Color.parseColor("#ffffff"));
+        Orders.setBackgroundColor(Color.parseColor("#e3e2de"));
+        Orders.setClickable(true);
+        Edit.setBackgroundColor(Color.parseColor("#e3e2de"));
+        Edit.setClickable(true);
+        Orders.setTextColor(Color.parseColor("#000000"));
+        Edit.setTextColor(Color.parseColor("#000000"));
     }
 
 

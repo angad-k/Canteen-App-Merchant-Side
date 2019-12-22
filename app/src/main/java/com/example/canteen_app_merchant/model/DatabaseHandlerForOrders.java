@@ -40,8 +40,14 @@ public class DatabaseHandlerForOrders {
                         if (task.isSuccessful())
                         {
                             orderData.put("document", task.getResult());
-                            OrdersViewModel mViewModel = ViewModelProviders.of(OrdersFrag.frag).get(OrdersViewModel.class);
-                            mViewModel.getOrders().setValue(orderData);
+                            try
+                            {
+                                OrdersViewModel mViewModel = ViewModelProviders.of(OrdersFrag.frag).get(OrdersViewModel.class);
+                                mViewModel.getOrders().setValue(orderData);
+                            }catch (Exception e2)
+                            {
+
+                            }
                             System.out.println(orderData);
                         }
                         else
@@ -65,9 +71,15 @@ public class DatabaseHandlerForOrders {
 
                         orderData.put("document", value);
 
+                        try
+                        {
+                            OrdersViewModel mViewModel = ViewModelProviders.of(OrdersFrag.frag).get(OrdersViewModel.class);
+                            mViewModel.getOrders().setValue(orderData);
+                        }catch (Exception e2)
+                        {
 
-                        OrdersViewModel mViewModel = ViewModelProviders.of(OrdersFrag.frag).get(OrdersViewModel.class);
-                        mViewModel.getOrders().setValue(orderData);
+                        }
+
                     }
                 });
 

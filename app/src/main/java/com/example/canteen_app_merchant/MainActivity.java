@@ -44,6 +44,10 @@ public class MainActivity extends AppCompatActivity  {
     public static String uid;
     public static String Bhawan;
 
+    public static String Name = "";
+    public static String Price = "";
+    public static boolean Availablity;
+
 
     // [START declare_auth]
     private FirebaseAuth mAuth;
@@ -51,10 +55,14 @@ public class MainActivity extends AppCompatActivity  {
 
     public void onCreate(Bundle savedInstanceState)
     {
+
+
         getSupportActionBar().hide();
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         setContentView(R.layout.activity_main);
+
+
 
         //authcode
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
