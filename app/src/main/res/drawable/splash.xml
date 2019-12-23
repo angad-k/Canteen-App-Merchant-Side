@@ -6,8 +6,9 @@
 
 
     <item>
-        <bitmap android:src="@drawable/splashscreenmerchant"
-            android:gravity="center|fill_horizontal"
+        <bitmap android:src="@drawable/splashscreenmerch"
+            android:gravity="center|clip_horizontal|clip_vertical"
+            android:dither="true"
             />
 
     </item>

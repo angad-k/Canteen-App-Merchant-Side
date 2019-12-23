@@ -77,7 +77,7 @@ public class OrdersFrag extends Fragment {
                     cardlinear.setOrientation(LinearLayout.VERTICAL);
 
                     TextView userid = new TextView(getActivity());
-                    userid.setText("UID : \n" + document.get("uid") );
+                    userid.setText("Name : \n" + document.get("Name") );
                     userid.setTextColor(Color.parseColor("#000000"));
                     userid.setLayoutParams(param);
                     cardlinear.addView(userid);
@@ -163,7 +163,29 @@ public class OrdersFrag extends Fragment {
                     deliver.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+
+                            final Map<String, Object> OrderState = new HashMap<>();
+                            OrderState.put("OrderState", "Delivered");
                             FirebaseFirestore db = FirebaseFirestore.getInstance();
+                            db.collection("users").document("usersdoc").collection((String)document.get("uid"))
+                                    .whereEqualTo("Date", document.get("Date"))
+                                    .get()
+                                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+                                        @Override
+                                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                                            if (task.isSuccessful()) {
+                                                for (QueryDocumentSnapshot document : task.getResult()) {
+                                                    document.getReference().set(OrderState, SetOptions.merge());
+
+                                                }
+                                            } else {
+                                                Log.d(TAG, "Error getting documents: ", task.getException());
+                                            }
+                                        }
+                                    });
+
+
+
                             db.collection(MainActivity.Bhawan + "-orders")
                                     .whereEqualTo("uid", document.get("uid"))
                                     .whereEqualTo("Date", document.get("Date"))
