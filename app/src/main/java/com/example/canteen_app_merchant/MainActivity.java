@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity  {
     public static String Name = "";
     public static String Price = "";
     public static boolean Availablity;
+    public static int resumer = 1;
 
 
     // [START declare_auth]
